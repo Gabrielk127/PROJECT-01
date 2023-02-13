@@ -25,10 +25,11 @@ body {
   background-size: 390px 300px;
   background-position: left bottom;
   background-attachment: fixed;
+  min-height: 100vh;
  
   position: fixed;
   
-  border-radius: 6rem;
+  border-radius: 6rem 6rem 2rem 2rem;
 
   
 
@@ -38,7 +39,7 @@ header {
   font-family: var(--ff-header);
   display: flex;
   flex-direction: column;
-  margin: 8rem 2rem 3.2rem;
+  margin: 6rem 2rem 3.2rem;
   align-items: center;
 }
 
@@ -94,7 +95,7 @@ li {
   font-family: 'Alata';
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.9rem;
  
   color: #E8E8E8;
@@ -137,4 +138,28 @@ footer p {
   color: #FFFFFF;
   text-align: center;
   padding-bottom: 1.5rem;
+}
+
+/* Animações */
+
+.typing {
+  width: 210px;
+  animation: typing 2s steps(22), blink .5s;
+
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
