@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  font-size: 62.5%;
+
+  --ff-header: 'Alata', sans-serif;
+  --ff-body: 'Open Sans', sans-serif;
+
+  --background-main: #221A37;
+  --background-button: #402166;
+}
+
+body {
+  background: #242424;
+}
+.page {
+  background-color: var(--background-main);
+  background-image: url(images/mobile-background.png);
+  background-repeat: no-repeat;
+  background-size: 390px 300px;
+  background-position: left bottom;
+  background-attachment: fixed;
+ 
+  position: fixed;
+  
+  border-radius: 4rem;
+
+  
+
+}
+
+header {
+  font-family: var(--ff-header);
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 2rem 3.2rem;
+  align-items: center;
+}
+
+.header1 {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.header1 a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
+
+  
+
+  color: #E8E8E8;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header1 button {
+  background-color: var(--background-button);
+
+  border-radius: 2.6rem;
+  border: none;
+  width: 10rem;
+  height: 3rem; 
+
+  font-family: var(--ff-header);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+ 
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 2.2rem;
+}
+
+li {
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+ 
+  color: #E8E8E8;
+}
+
+main {
+  margin: 4.5rem 3rem;
+}
+
+main p:nth-child(1) {
+  color: #5D3974;
+  font-size: 1.7rem;
+  line-height: 2.7rem;
+}
+
+main p {
+  font-family: var(--ff-body);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  padding-top: 0.8rem;
+
+  color: #C0C0C0;
+}
+
+main h1 {
+  font-family: var(--ff-body);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 6.1rem;
+
+  color: #E8E8E8;
+}
