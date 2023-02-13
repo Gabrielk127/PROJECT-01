@@ -130,3 +130,9 @@ main h1 {
 
   color: #E8E8E8;
 }
+
+footer p {
+  color: #5D3974;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
