@@ -25,10 +25,12 @@ body {
   background-size: 390px 300px;
   background-position: left bottom;
   background-attachment: fixed;
+  min-height: 100vh;
+  z-index: 0;
  
-  position: fixed;
-  
-  border-radius: 4rem;
+
+  margin: 1rem;
+  border-radius: 5rem 5rem 5rem 5rem;
 
   
 
@@ -38,7 +40,7 @@ header {
   font-family: var(--ff-header);
   display: flex;
   flex-direction: column;
-  margin: 3rem 2rem 3.2rem;
+  padding: 6rem 2rem 3.2rem;
   align-items: center;
 }
 
@@ -48,12 +50,15 @@ header {
   justify-content: space-between;
   gap: 2rem;
 }
-
+header a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
 .header1 a {
   text-decoration: none;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 3rem;
   letter-spacing: 1px;
 
@@ -64,7 +69,7 @@ header {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.header1 button {
+button {
   background-color: var(--background-button);
 
   border-radius: 2.6rem;
@@ -83,19 +88,23 @@ header {
   color: #FFFFFF;
 }
 
+#deskbutton {
+  display: none;
+}
+
 ul {
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin-top: 2.2rem;
+  margin-top: 3rem;
 }
 
 li {
   font-family: 'Alata';
   font-style: normal;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.7rem;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
  
   color: #E8E8E8;
 }
@@ -106,8 +115,9 @@ main {
 
 main p:nth-child(1) {
   color: #5D3974;
-  font-size: 1.7rem;
+  font-size: clamp(1em, 0.5em + 2vw, 1.5em);
   line-height: 2.7rem;
+  margin-bottom: 1rem;
 }
 
 main p {
@@ -116,7 +126,7 @@ main p {
   font-style: normal;
   font-size: 1.3rem;
   line-height: 2.2rem;
-  padding-top: 0.8rem;
+  padding-top: 1.3rem;
 
   color: #C0C0C0;
 }
@@ -125,8 +135,128 @@ main h1 {
   font-family: var(--ff-body);
   font-style: normal;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: clamp(4em, 1em + 4vw, 6.2em);
   line-height: 6.1rem;
+  margin-bottom: 2rem;
 
   color: #E8E8E8;
+}
+
+footer p {
+  color: #FFFFFF;
+  text-align: center;
+  
+}
+/* Resposividade*/
+
+@media (min-width: 500px) {
+  .page {
+    background-image: none;
+    background-image: url(images/background.png);
+    
+    background-size: 45rem 30rem;
+    background-size: 90%;
+    background-position: left 1.5em bottom;
+
+  }
+
+  .text {
+    position: relative;
+    
+  }
+  main {
+    position: absolute;
+    right: 1rem;
+    width: 30rem;
+  }
+
+}
+
+@media (min-width: 1100px) {
+  main {
+    right: 10rem;
+    width: 40rem;
+  }
+
+  .page {
+    background-size: 55%;
+
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6rem 5rem;
+  }
+  #deskbutton {
+    display: block;
+    width: 15rem;
+    height: 4rem; 
+  }
+  header button:nth-child(2) {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 5.2rem;
+    align-items: center;
+  }
+  ul {
+    gap: 9.2rem;
+    margin: 0;
+  }
+
+  header h1 {
+    margin-right: 10rem;
+    
+  }
+}
+
+
+/* Animações */
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+header {
+  animation: topdown 4000ms ;
+}
+
+
+@keyframes left-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+main h1 {
+  animation: left-right 3000ms;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+  color: var(--background-button);
+}
+nav ul li:hover {
+  padding-bottom: 0.5rem;
+
+}
+
+header button:hover {
+  background-color: #5D3974;
 }
